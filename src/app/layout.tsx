@@ -21,6 +21,9 @@ export const metadata: Metadata = {
   icons: {
     icon: 'https://em-content.zobj.net/source/microsoft-teams/363/grinning-face_1f600.png',
   },
+  verification: {
+    google: 'JII9GClDk2nsnpFFMx1-b4j2HepZ6mJel89NicslG1I',
+  },
 }
 
 export default function RootLayout({
