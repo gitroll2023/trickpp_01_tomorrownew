@@ -1,6 +1,5 @@
 'use client'
 
-import Image from 'next/image'
 import { useRef } from 'react'
 import html2canvas from 'html2canvas'
 import { Invitation } from '@/types/invitation'
@@ -90,20 +89,16 @@ export default function InvitationClient({
           </h1>
         )}
         
-        <div style={{ 
-          position: 'relative', 
+        <div className="relative" style={{
           width: '100%',
           height: '800px',
           marginBottom: '2rem',
         }}>
-          <Image
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
             src={invitation.imageUrl}
             alt="초대장 이미지"
-            fill
-            style={{ objectFit: 'contain' }}
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            priority
-            quality={100}
+            className="absolute inset-0 w-full h-full object-contain"
           />
         </div>
 
