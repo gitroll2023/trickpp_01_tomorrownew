@@ -1,0 +1,69 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Admin {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  password  String
+  name      String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Invitation {
+  id          String   @id @default(cuid())
+  uniqueCode  String   @unique
+  title       String
+  description String?
+  imageUrl    String
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  expiresAt   DateTime?
+  downloads   Int      @default(0)
+  metadata    Json?
+  recipients  Recipient[]
+}
+
+model Recipient {
+  id           String     @id @default(cuid())
+  name         String
+  uniqueCode   String     @unique
+  invitation   Invitation @relation(fields: [invitationId], references: [id])
+  invitationId String
+  createdAt    DateTime   @default(now())
+  updatedAt    DateTime   @updatedAt
+  isActive     Boolean    @default(true)
+  viewCount    Int        @default(0)
+
+  @@index([invitationId])
+}
+
+model Participation {
+  id           String   @id @default(cuid())
+  name         String   // 참가자 이름
+  phone        String   // 전화번호
+  participants Int      // 참가 인원
+  time         String   // 선호 시간
+  message      String?  // 추가 메시지
+  status       String   @default("pending") // pending, confirmed, cancelled
+  eventDate    DateTime // 참가 예정인 토요일 날짜
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  isActive     Boolean  @default(true)
+
+  @@index([eventDate])
+  @@index([phone])
+}

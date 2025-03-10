@@ -9,19 +9,34 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@heroicons/react": "^2.2.0",
+    "@prisma/client": "^6.4.1",
+    "@types/bcryptjs": "^2.4.6",
+    "@types/uuid": "^10.0.0",
+    "@vercel/postgres": "^0.10.0",
+    "bcryptjs": "^3.0.2",
+    "date-fns": "^4.1.0",
+    "framer-motion": "^12.4.10",
+    "html2canvas": "^1.4.1",
+    "next": "15.2.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "next": "15.2.1"
+    "swiper": "^11.2.5",
+    "uuid": "^11.1.0"
   },
   "devDependencies": {
-    "typescript": "^5",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/forms": "^0.5.10",
     "@tailwindcss/postcss": "^4",
-    "tailwindcss": "^4",
+    "@tailwindcss/typography": "^0.5.16",
+    "@types/node": "^20.17.24",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
     "eslint": "^9",
     "eslint-config-next": "15.2.1",
-    "@eslint/eslintrc": "^3"
+    "prisma": "^6.4.1",
+    "tailwindcss": "^4",
+    "typescript": "^5"
   }
 }
