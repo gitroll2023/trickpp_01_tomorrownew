@@ -2,8 +2,15 @@
 const nextConfig = {
   images: {
     domains: ['i.ibb.co'], // ImgBB 이미지 도메인 허용
-    unoptimized: true,
+    unoptimized: false,
     minimumCacheTTL: 60,
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'i.ibb.co',
+        pathname: '/**',
+      },
+    ],
   },
   eslint: {
     ignoreDuringBuilds: true, // 빌드 중 ESLint 검사 비활성화

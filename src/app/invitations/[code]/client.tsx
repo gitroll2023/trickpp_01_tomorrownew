@@ -101,7 +101,9 @@ export default function InvitationClient({
             alt="초대장 이미지"
             fill
             style={{ objectFit: 'contain' }}
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             priority
+            quality={100}
           />
         </div>
 
