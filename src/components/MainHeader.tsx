@@ -63,7 +63,7 @@ export default function MainHeader() {
                   <span className="absolute -top-1.5 -right-2.5 w-2 h-2 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full group-hover:from-blue-600 group-hover:to-blue-700 transition-all" />
                 </div>
                 <div className="text-xs sm:text-sm text-gray-500 group-hover:text-gray-600 transition-colors font-pretendard">
-                  나주시 청년문화예술단체
+                  새로운 내일을 만들다
                 </div>
               </div>
             </Link>

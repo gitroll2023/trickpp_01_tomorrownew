@@ -13,7 +13,7 @@ export default function Footer() {
                 <span className="absolute -top-0.5 -right-2 w-1.5 h-1.5 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full" />
               </h3>
               <div className="text-sm text-gray-400 font-pretendard mt-1">
-                나주시 청년문화예술단체
+                새로운 내일을 만들다
               </div>
             </div>
             <p className="mb-4 text-gray-300">

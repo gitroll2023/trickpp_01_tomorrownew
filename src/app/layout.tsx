@@ -9,10 +9,10 @@ import 'swiper/css/pagination'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: '라온하제 - 나주시 청년문화예술단체',
+  title: '라온하제 - 새로운 내일을 만들다',
   description: '나주시의 청년들이 모여 문화예술 활동과 지역 탐방을 통해 즐겁고 행복한 나주의 새로운 문화를 만들어가는 청년 단체',
   openGraph: {
-    title: '라온하제 - 나주시 청년문화예술단체',
+    title: '라온하제 - 새로운 내일을 만들다',
     description: '나주시의 청년들이 모여 문화예술 활동과 지역 탐방을 통해 즐겁고 행복한 나주의 새로운 문화를 만들어가는 청년 단체',
     images: ['/og-image.jpg'],
     type: 'website',
