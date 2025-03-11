@@ -76,9 +76,15 @@ export default function MainHeader() {
         {/* 메인 네비게이션 */}
         <div className="border-t">
           <div className="container mx-auto px-4">
-            <nav className="flex">
+            <nav className="flex overflow-x-auto whitespace-nowrap hide-scrollbar">
               {menuItems.map((menuItem, index) => (
-                <Link key={index} href={menuItem.href} className="px-6 py-4 text-gray-700 hover:text-blue-600 hover:bg-gray-50 font-medium">{menuItem.label}</Link>
+                <Link 
+                  key={index} 
+                  href={menuItem.href} 
+                  className="px-4 py-4 text-gray-700 hover:text-blue-600 hover:bg-gray-50 font-medium flex-shrink-0"
+                >
+                  {menuItem.label}
+                </Link>
               ))}
             </nav>
           </div>
