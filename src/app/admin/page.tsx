@@ -6,7 +6,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Invitation, Recipient } from '@/types/invitation'
 import CreateInvitationModal from '@/components/CreateInvitationModal'
-import ParticipationManagement from '@/components/ParticipationManagement'
+import EditInvitationModal from '@/components/EditInvitationModal'
 
 export default function AdminPage() {
   const [invitations, setInvitations] = useState<Invitation[]>([])
@@ -15,8 +15,8 @@ export default function AdminPage() {
   const [showAddRecipient, setShowAddRecipient] = useState<string | null>(null)
   const [newRecipientName, setNewRecipientName] = useState('')
   const [showCreateModal, setShowCreateModal] = useState(false)
-  const [isModalOpen, setIsModalOpen] = useState(false)
-  const [activeTab, setActiveTab] = useState('invitations') // 'invitations' | 'participations'
+  const [showEditModal, setShowEditModal] = useState(false)
+  const [selectedInvitation, setSelectedInvitation] = useState<Invitation | null>(null)
   const router = useRouter()
 
   useEffect(() => {
@@ -130,6 +130,19 @@ export default function AdminPage() {
     }
   }
 
+  const handleEdit = (invitation: Invitation) => {
+    setSelectedInvitation(invitation)
+    setShowEditModal(true)
+  }
+
+  const handleUpdate = (updatedInvitation: Invitation) => {
+    setInvitations((prev) =>
+      prev.map((inv) =>
+        inv.id === updatedInvitation.id ? updatedInvitation : inv
+      )
+    )
+  }
+
   if (loading) {
     return (
       <div className="container mx-auto px-4 py-8">
@@ -153,168 +166,173 @@ export default function AdminPage() {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      {/* 탭 네비게이션 */}
-      <div className="border-b border-gray-200 mb-8">
-        <nav className="-mb-px flex space-x-8">
-          <button
-            onClick={() => setActiveTab('invitations')}
-            className={`py-4 px-1 border-b-2 font-medium text-sm ${
-              activeTab === 'invitations'
-                ? 'border-blue-500 text-blue-600'
-                : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
-            }`}
-          >
-            초대장 관리
-          </button>
-          <button
-            onClick={() => setActiveTab('participations')}
-            className={`py-4 px-1 border-b-2 font-medium text-sm ${
-              activeTab === 'participations'
-                ? 'border-blue-500 text-blue-600'
-                : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
-            }`}
-          >
-            참가 신청 관리
-          </button>
-        </nav>
+      <div className="flex justify-between items-center mb-8">
+        <h2 className="text-2xl font-bold">초대장 목록</h2>
+        <button
+          onClick={() => setShowCreateModal(true)}
+          className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+        >
+          새 초대장 만들기
+        </button>
       </div>
 
-      {/* 초대장 관리 탭 */}
-      {activeTab === 'invitations' && (
-        <div>
-          <div className="flex justify-between items-center mb-8">
-            <h1 className="text-2xl font-semibold">초대장 관리</h1>
-            <button
-              onClick={() => setShowCreateModal(true)}
-              className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600"
-            >
-              새 초대장 만들기
-            </button>
-          </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {invitations.map((invitation) => (
+          <div
+            key={invitation.uniqueCode}
+            className="bg-white rounded-lg shadow-md overflow-hidden"
+          >
+            {invitation.imageUrl && (
+              <div className="relative h-48 bg-gray-100">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={invitation.imageUrl}
+                  alt={invitation.title}
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+              </div>
+            )}
+            <div className="p-4">
+              <h3 className="text-xl font-semibold mb-2">{invitation.title}</h3>
+              <p className="text-gray-600 mb-4 line-clamp-2">
+                {invitation.description}
+              </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {invitations.map((invitation) => (
-              <div
-                key={invitation.uniqueCode}
-                className="bg-white rounded-lg shadow-md overflow-hidden"
-              >
-                {invitation.imageUrl && (
-                  <div className="relative h-48 bg-gray-100">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      src={invitation.imageUrl}
-                      alt={invitation.title}
-                      className="absolute inset-0 w-full h-full object-cover"
-                    />
-                  </div>
-                )}
-                <div className="p-4">
-                  <h3 className="text-xl font-semibold mb-2">{invitation.title}</h3>
-                  <p className="text-gray-600 mb-4 line-clamp-2">
-                    {invitation.description}
-                  </p>
-
-                  {/* 수신자 목록 */}
-                  <div className="mb-4">
-                    <div className="flex justify-between items-center mb-2">
-                      <h4 className="font-semibold">수신자 목록</h4>
-                      <button
-                        onClick={() => setShowAddRecipient(invitation.uniqueCode)}
-                        className="text-sm text-blue-500 hover:text-blue-600"
-                      >
-                        + 수신자 추가
-                      </button>
-                    </div>
-                    
-                    {/* 수신자 추가 폼 */}
-                    {showAddRecipient === invitation.uniqueCode && (
-                      <div className="mb-2 flex gap-2">
-                        <input
-                          type="text"
-                          value={newRecipientName}
-                          onChange={(e) => setNewRecipientName(e.target.value)}
-                          placeholder="수신자 이름"
-                          className="flex-1 px-2 py-1 border rounded"
-                        />
-                        <button
-                          onClick={() => handleAddRecipient(invitation.uniqueCode)}
-                          className="px-3 py-1 bg-blue-500 text-white rounded hover:bg-blue-600"
-                        >
-                          추가
-                        </button>
-                      </div>
-                    )}
-
-                    {/* 수신자 리스트 */}
-                    <div className="space-y-2">
-                      {invitation.recipients?.map((recipient) => (
-                        <div
-                          key={recipient.uniqueCode}
-                          className="flex items-center justify-between bg-gray-50 p-2 rounded"
-                        >
-                          <span>{recipient.name}</span>
-                          <div className="flex gap-2">
-                            <Link
-                              href={`/invitations/${invitation.uniqueCode}/${recipient.uniqueCode}`}
-                              target="_blank"
-                              className="text-sm text-blue-500 hover:text-blue-600"
-                            >
-                              링크 보기
-                            </Link>
-                            <button
-                              onClick={() => {
-                                const link = `${window.location.origin}/invitations/${invitation.uniqueCode}/${recipient.uniqueCode}`
-                                navigator.clipboard.writeText(link)
-                                alert('링크가 복사되었습니다.')
-                              }}
-                              className="text-sm text-gray-500 hover:text-gray-600"
-                            >
-                              링크 복사
-                            </button>
-                            <button
-                              onClick={() => handleDeleteRecipient(invitation.uniqueCode, recipient.id)}
-                              className="text-sm text-red-500 hover:text-red-600"
-                            >
-                              삭제
-                            </button>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="flex justify-end">
-                    <button
-                      onClick={() => handleDelete(invitation.uniqueCode)}
-                      className="text-red-500 hover:text-red-600"
-                    >
-                      초대장 삭제
-                    </button>
-                  </div>
+              {/* 초대장 기본 링크 */}
+              <div className="mb-4 p-3 bg-gray-50 rounded">
+                <div className="flex justify-between items-center">
+                  <span className="font-semibold">기본 초대장 링크</span>
+                  <button
+                    onClick={() => {
+                      const link = `${window.location.origin}/invitations/${invitation.uniqueCode}`
+                      navigator.clipboard.writeText(link)
+                      alert('링크가 복사되었습니다.')
+                    }}
+                    className="text-sm text-blue-500 hover:text-blue-600"
+                  >
+                    링크 복사
+                  </button>
+                </div>
+                <div className="mt-2 text-sm text-gray-500 break-all">
+                  {`${window.location.origin}/invitations/${invitation.uniqueCode}`}
                 </div>
               </div>
-            ))}
-          </div>
 
-          {invitations.length === 0 && (
-            <div className="text-center py-8">
-              <p className="text-gray-600">아직 생성된 초대장이 없습니다.</p>
+              {/* 수신자 목록 */}
+              <div className="mb-4">
+                <div className="flex justify-between items-center mb-2">
+                  <h4 className="font-semibold">수신자 목록</h4>
+                  <button
+                    onClick={() => setShowAddRecipient(invitation.uniqueCode)}
+                    className="text-sm text-blue-500 hover:text-blue-600"
+                  >
+                    + 수신자 추가
+                  </button>
+                </div>
+                
+                {/* 수신자 추가 폼 */}
+                {showAddRecipient === invitation.uniqueCode && (
+                  <div className="mb-2 flex gap-2">
+                    <input
+                      type="text"
+                      value={newRecipientName}
+                      onChange={(e) => setNewRecipientName(e.target.value)}
+                      placeholder="수신자 이름"
+                      className="flex-1 px-2 py-1 border rounded"
+                    />
+                    <button
+                      onClick={() => handleAddRecipient(invitation.uniqueCode)}
+                      className="px-3 py-1 bg-blue-500 text-white rounded hover:bg-blue-600"
+                    >
+                      추가
+                    </button>
+                  </div>
+                )}
+
+                {/* 수신자 리스트 */}
+                <div className="space-y-2">
+                  {invitation.recipients?.map((recipient) => (
+                    <div
+                      key={recipient.uniqueCode}
+                      className="flex items-center justify-between bg-gray-50 p-2 rounded"
+                    >
+                      <span>{recipient.name}</span>
+                      <div className="flex gap-2">
+                        <Link
+                          href={`/invitations/${invitation.uniqueCode}/${recipient.uniqueCode}`}
+                          target="_blank"
+                          className="text-sm text-blue-500 hover:text-blue-600"
+                        >
+                          링크 보기
+                        </Link>
+                        <button
+                          onClick={() => {
+                            const link = `${window.location.origin}/invitations/${invitation.uniqueCode}/${recipient.uniqueCode}`
+                            navigator.clipboard.writeText(link)
+                            alert('링크가 복사되었습니다.')
+                          }}
+                          className="text-sm text-blue-500 hover:text-blue-600"
+                        >
+                          링크 복사
+                        </button>
+                        <button
+                          onClick={() => handleDeleteRecipient(invitation.uniqueCode, recipient.id)}
+                          className="text-sm text-red-500 hover:text-red-600"
+                        >
+                          삭제
+                        </button>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="flex justify-end">
+                <div className="space-x-2">
+                  <button
+                    onClick={() => handleEdit(invitation)}
+                    className="text-blue-500 hover:text-blue-600"
+                  >
+                    수정
+                  </button>
+                  <button
+                    onClick={() => handleDelete(invitation.uniqueCode)}
+                    className="text-red-500 hover:text-red-600"
+                  >
+                    초대장 삭제
+                  </button>
+                </div>
+              </div>
             </div>
-          )}
+          </div>
+        ))}
+      </div>
 
-          <CreateInvitationModal
-            isOpen={showCreateModal}
-            onClose={() => setShowCreateModal(false)}
-            onSuccess={() => {
-              fetchInvitations()
-              setShowCreateModal(false)
-            }}
-          />
+      {invitations.length === 0 && (
+        <div className="text-center py-8">
+          <p className="text-gray-600">아직 생성된 초대장이 없습니다.</p>
         </div>
       )}
 
-      {/* 참가 신청 관리 탭 */}
-      {activeTab === 'participations' && <ParticipationManagement />}
+      <CreateInvitationModal
+        isOpen={showCreateModal}
+        onClose={() => setShowCreateModal(false)}
+        onSuccess={() => {
+          fetchInvitations()
+          setShowCreateModal(false)
+        }}
+      />
+      {showEditModal && selectedInvitation && (
+        <EditInvitationModal
+          isOpen={showEditModal}
+          invitation={selectedInvitation}
+          onClose={() => {
+            setShowEditModal(false)
+            setSelectedInvitation(null)
+          }}
+          onUpdate={handleUpdate}
+        />
+      )}
     </div>
   )
 }

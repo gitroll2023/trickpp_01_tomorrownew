@@ -77,17 +77,15 @@ export default function InvitationClient({
           margin: '0 auto',
         }}
       >
-        {recipientName && (
-          <h1 style={{
-            fontSize: '1.5rem',
-            fontWeight: '700',
-            textAlign: 'center',
-            marginBottom: '2rem',
-            color: '#111827'
-          }}>
-            "{recipientName}"님을 초대합니다
-          </h1>
-        )}
+        <h1 style={{
+          fontSize: '1.5rem',
+          fontWeight: '700',
+          textAlign: 'center',
+          marginBottom: '2rem',
+          color: '#111827'
+        }}>
+          {recipientName ? `"${recipientName}"님을 초대합니다` : "당신을 초대합니다"}
+        </h1>
         
         <div className="relative" style={{
           width: '100%',
