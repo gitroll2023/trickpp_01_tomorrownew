@@ -26,8 +26,8 @@ const programs = [
     id: 3,
     title: '베이킹 클래스',
     description: '전문 강사와 함께 케이크, 마카롱 등 달콤한 디저트를 만들어봅니다.',
-    image: '/group/11.jpg',
-    additionalImages: ['/group/21.jpg', '/group/22.jpg', '/group/23.jpg']
+    image: '/group/27.png',
+    additionalImages: ['/group/26.png','/group/11.jpg','/group/21.jpg', '/group/22.jpg', '/group/23.jpg']
   },
   {
     id: 4,

@@ -2,7 +2,6 @@
 
 import React from 'react'
 import Link from 'next/link'
-import WeatherWidget from './WeatherWidget'
 import { useState, useEffect } from 'react'
 import { isSessionValid } from '@/utils/auth'
 
@@ -67,9 +66,6 @@ export default function MainHeader() {
                 </div>
               </div>
             </Link>
-
-            {/* 날씨 위젯 */}
-            <WeatherWidget />
           </div>
         </div>
 
