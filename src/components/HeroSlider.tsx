@@ -12,23 +12,23 @@ import 'swiper/css/effect-fade'
 const slides = [
   {
     image: '/main/1.jpg',
-    title: '즐거운 내일을\n만들어갑니다',
-    description: '지역 발전을 위한 청년들의\n다양한 아이디어와 프로젝트'
+    title: '온라인으로 연결되는\n청년 커뮤니티',
+    description: '시간과 장소에 구애받지 않고\n온라인 플랫폼을 통해 소통합니다'
   },
   {
     image: '/main/2.jpg',
-    title: '지역의 미래를\n이끌어갑니다',
-    description: '나주의 청년들이 모여\n더 나은 지역사회를 만들어가는 공간'
+    title: '다양한 장소에서\n만나는 청년들',
+    description: '나주 곳곳의 공간을 활용하여\n유연하고 창의적인 활동을 펼칩니다'
   },
   {
     image: '/main/3.jpg',
-    title: '함께 꿈꾸는\n나주의 내일',
-    description: '문화, 예술, 교육을 통해\n지역사회와 소통하는 청년들의 이야기'
+    title: '함께 성장하는\n나주의 청년들',
+    description: '문화, 예술, 봉사활동을 통해\n지역사회와 소통하며 성장합니다'
   },
   {
     image: '/main/4.jpg',
-    title: '변화의 시작은\n청년에게서',
-    description: '지역 발전을 위한\n청년들의 다양한 아이디어와 프로젝트'
+    title: '변화를 만드는\n청년 네트워크',
+    description: '온오프라인을 넘나들며\n지역 발전을 위한 프로젝트를 진행합니다'
   }
 ]
 

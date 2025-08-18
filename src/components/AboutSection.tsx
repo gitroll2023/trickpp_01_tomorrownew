@@ -6,9 +6,13 @@ export default function AboutSection() {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-800 mb-8">라온하제 소개</h2>
-          <p className="text-xl text-gray-600 leading-relaxed">
+          <p className="text-xl text-gray-600 leading-relaxed mb-4">
             라온하제는 나주시의 청년들이 모여 문화예술 활동과 지역 탐방을 통해<br />
             즐겁고 행복한 나주의 새로운 문화를 만들어가는 청년 단체입니다.
+          </p>
+          <p className="text-lg text-gray-500">
+            온라인 플랫폼과 나주시 곳곳의 다양한 공간에서 활동하며,<br />
+            시간과 장소에 구애받지 않는 유연한 커뮤니티를 운영합니다.
           </p>
         </div>
 

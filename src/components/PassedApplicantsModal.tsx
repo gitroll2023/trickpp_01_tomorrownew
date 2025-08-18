@@ -15,7 +15,7 @@ const passedApplicants = {
     { name: '윤*현', location: '전라남도 나주시', part: '실용음악' },
   ],
   시각예술: [
-    { name: '강*우', location: '전라남도 나주시', part: '사진/영상' },
+    { name: '강*우', location: '전라남도 나주시', part: '미디어아트' },
     { name: '조*민', location: '전라남도 나주시', part: '그래픽디자인' },
     { name: '황*진', location: '전라남도 나주시', part: '일러스트' },
   ]

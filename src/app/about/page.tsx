@@ -19,9 +19,13 @@ export default function About() {
                 지역의 새로운 문화를 만들어가는 청년 문화예술 단체입니다.
               </p>
               <p>
-                우리는 지역의 청년들이 함께 모여 문화예술 활동을 통해 서로 소통하고,
-                나주의 아름다운 자연과 문화를 탐방하며, 지역 사회에 긍정적인 변화를
-                만들어가고자 합니다.
+                우리는 고정된 사무실 없이 나주시 곳곳의 다양한 공간을 활용하여 활동합니다.
+                카페, 사무공간, 공원, 회의실 등 프로그램에 맞는 장소를 대여하여 사용하며,
+                온라인 플랫폼을 통해서도 활발히 소통하고 있습니다.
+              </p>
+              <p>
+                이러한 유연한 운영 방식은 더 많은 청년들이 부담 없이 참여할 수 있는 환경을 만들고,
+                나주의 다양한 공간을 경험하며 지역과 더욱 친밀해지는 기회를 제공합니다.
               </p>
             </div>
           </section>
@@ -46,8 +50,8 @@ export default function About() {
                 </div>
                 <h3 className="text-xl font-bold mb-4">소통</h3>
                 <p className="text-gray-600">
-                  세대와 직업을 넘어 다양한 청년들이 만나 서로의 생각과 
-                  경험을 나누며 함께 성장합니다.
+                  온·오프라인을 넘나들며 시간과 장소에 구애받지 않고
+                  다양한 청년들이 만나 서로의 생각과 경험을 나눕니다.
                 </p>
               </div>
               <div className="bg-white p-8 rounded-lg shadow-sm">
@@ -104,6 +108,39 @@ export default function About() {
             </div>
           </section>
 
+          {/* 운영 방식 */}
+          <section className="mb-20">
+            <h2 className="text-3xl font-bold text-center mb-12">운영 방식</h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="bg-blue-50 p-8 rounded-lg">
+                <h3 className="text-xl font-bold text-gray-800 mb-4">온라인 중심 소통</h3>
+                <p className="text-gray-600 mb-4">
+                  라온하제는 온라인 플랫폼을 적극 활용하여 청년들이 시간과 장소에 구애받지 않고
+                  참여할 수 있도록 합니다. 화상 회의, SNS, 메신저 등 다양한 채널을 통해
+                  일상적인 소통과 프로젝트 협업이 이루어집니다.
+                </p>
+                <ul className="text-gray-600 space-y-2">
+                  <li>• 매주 정기 온라인 모임 진행</li>
+                  <li>• SNS를 통한 일상 소통</li>
+                  <li>• 온라인 워크샵 및 세미나</li>
+                </ul>
+              </div>
+              <div className="bg-green-50 p-8 rounded-lg">
+                <h3 className="text-xl font-bold text-gray-800 mb-4">유연한 오프라인 활동</h3>
+                <p className="text-gray-600 mb-4">
+                  고정된 사무실 없이 나주시 내 다양한 장소를 활용합니다.
+                  각 프로그램의 성격에 맞는 최적의 공간을 선택하여 대여하며,
+                  이를 통해 나주의 다양한 공간을 경험할 수 있습니다.
+                </p>
+                <ul className="text-gray-600 space-y-2">
+                  <li>• 카페, 사무공간, 공원 등 다양한 장소 활용</li>
+                  <li>• 프로그램별 최적 장소 선택</li>
+                  <li>• 참가자 접근성 고려한 장소 선정</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
           {/* 참여 방법 */}
           <section>
             <h2 className="text-3xl font-bold text-center mb-12">참여 방법</h2>
@@ -111,15 +148,26 @@ export default function About() {
               <div className="space-y-6">
                 <p className="text-gray-600">
                   라온하제는 나주 지역의 모든 청년들에게 열려있습니다.
-                  프로그램별 참여가 가능하며, 관심 있는 활동에 자유롭게 참여할 수 있습니다.
+                  온라인과 오프라인을 통해 다양한 방식으로 참여가 가능합니다.
                 </p>
-                <p className="text-gray-600">
-                  시즌별로 진행되는 특별 프로그램의 경우, 메인페이지 팝업창을 통해
-                  모집 일정과 참여 방법을 안내해드립니다.
-                </p>
-                <p className="text-gray-600">
-                  주 1회 진행되는 소모임은 수시로 참여가 가능하며,
-                  처음 오시는 분들도 부담 없이 참여하실 수 있습니다.
+                <div className="bg-gray-50 p-6 rounded-lg">
+                  <h3 className="font-bold text-gray-800 mb-3">온라인 참여</h3>
+                  <ul className="text-gray-600 space-y-2">
+                    <li>• 정기 온라인 모임 참여 (매주 목요일 저녁 8시)</li>
+                    <li>• SNS 채널을 통한 일상 소통</li>
+                    <li>• 온라인 프로젝트 협업</li>
+                  </ul>
+                </div>
+                <div className="bg-gray-50 p-6 rounded-lg">
+                  <h3 className="font-bold text-gray-800 mb-3">오프라인 참여</h3>
+                  <ul className="text-gray-600 space-y-2">
+                    <li>• 프로그램별 오프라인 모임 참여</li>
+                    <li>• 시즌별 특별 행사 참가</li>
+                    <li>• 지역 탐방 및 봉사 활동</li>
+                  </ul>
+                </div>
+                <p className="text-gray-600 text-sm">
+                  * 모든 오프라인 활동 장소는 사전에 공지되며, 나주시 내 접근성이 좋은 곳으로 선정됩니다.
                 </p>
               </div>
             </div>
