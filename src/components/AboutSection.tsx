@@ -8,7 +8,7 @@ export default function AboutSection() {
           <h2 className="text-4xl font-bold text-gray-800 mb-8">라온하제 서비스</h2>
           <p className="text-xl text-gray-600 leading-relaxed mb-4">
             라온하제는 나주 지역 청년들을 위한 문화 네트워킹 서비스를 제공하는<br />
-            청년 문화 전문 기업입니다. (사업자등록번호: 123-45-67890)
+            청년 문화 전문 기업입니다.
           </p>
           <p className="text-lg text-gray-500">
             2023년 설립 이후 1,000명 이상의 회원과 함께<br />
