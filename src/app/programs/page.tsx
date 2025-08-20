@@ -8,63 +8,69 @@ import Footer from '@/components/Footer'
 const programs = [
   {
     id: 1,
-    title: '청년 문화 예술단',
-    description: '나주의 젊은 예술가들이 모여 도시의 문화를 새롭게 만들어갑니다. 매월 다른 문화공간에서 진행됩니다.',
-    location: '나주시 내 사무공간, 갤러리, 카페 등',
-    type: 'hybrid',
-    schedule: '매월 첫째, 셋째 주 화요일',
-    participants: '20-30명',
-    benefit: '문화예술 활동 지원, 네트워킹 기회 제공'
+    title: '문화 클래스',
+    description: '전문 강사와 함께하는 미술, 음악, 공예 클래스. 매주 금요일 저녁 2시간 진행.',
+    location: '나주 혁신도시 문화센터',
+    type: 'offline',
+    schedule: '매주 금요일 19:00-21:00',
+    participants: '클래스당 15명',
+    price: '기본 멤버십 포함',
+    benefit: '재료비 제공, 완성작 전시 기회'
   },
   {
     id: 2,
-    title: '힐링 탐방단',
-    description: '국립나주박물관, 산림자원연구소, 느러지 전망대 등 나주의 아름다운 명소를 찾아 떠나는 힐링 여행.',
-    location: '나주시 내 다양한 명소',
+    title: '주말 트레킹',
+    description: '나주 근교 산과 강변을 걸으며 스트레스를 해소하는 힘링 프로그램.',
+    location: '금성산, 영산강 둥치 등',
     type: 'offline',
-    schedule: '격주 토요일 오전',
-    participants: '15-20명',
-    benefit: '교통 지원, 입장료 지원, 간식 제공'
+    schedule: '격주 토요일 09:00-12:00',
+    participants: '회차당 20명',
+    price: '프리미엄 멤버십 포함',
+    benefit: '교통 지원, 간식 제공, 프로 가이드'
   },
   {
     id: 3,
-    title: '온라인 네트워킹',
-    description: '시간과 장소에 구애받지 않는 온라인 모임. 화상회의를 통해 프로젝트를 진행하고 아이디어를 공유합니다.',
-    location: '온라인 플랫폼 (Zoom, Discord 등)',
-    type: 'online',
-    schedule: '매주 목요일 저녁 8시',
-    participants: '제한 없음',
-    benefit: '온라인 툴 지원, 프로젝트 멘토링'
+    title: '네트워킹 파티',
+    description: '매월 마지막 금요일, 회원들이 만나 친목을 도모하는 소셜 이벤트.',
+    location: '나주 시내 카페 & 레스토랑',
+    type: 'offline',
+    schedule: '매월 마지막 금요일 19:00',
+    participants: '회차당 50명',
+    price: '별도 참가비 15,000원',
+    benefit: '음료 및 다과 제공, 경품 추첨'
   },
   {
     id: 4,
-    title: '맛집탐험대',
-    description: '숨은 맛집을 찾아 떠나는 미식 여행. 매번 다른 맛집에서 모여 나주의 맛을 탐험합니다.',
-    location: '나주시 내 다양한 음식점',
-    type: 'offline',
-    schedule: '매월 둘째 주 금요일',
-    participants: '10-15명',
-    benefit: '식사비 일부 지원, 맛집 정보 공유'
+    title: '온라인 프로그램',
+    description: 'ZOOM을 통한 온라인 강연, 워크샵, 네트워킹 모임.',
+    location: '온라인 (ZOOM)',
+    type: 'online',
+    schedule: '매주 화, 목 20:00',
+    participants: '프로그램당 100명',
+    price: '모든 멤버십 포함',
+    benefit: '녹화본 제공, 자료 다운로드'
   },
   {
     id: 5,
-    title: '청년 프로젝트팀',
-    description: '온·오프라인을 넘나들며 지역 발전 프로젝트를 기획하고 실행합니다. 유연한 참여가 가능합니다.',
-    location: '온라인 + 프로젝트별 오프라인 장소',
-    type: 'hybrid',
-    schedule: '프로젝트별 상이',
-    participants: '팀별 5-10명',
-    benefit: '프로젝트 예산 지원, 전문가 멘토링'
+    title: '분기별 특별 행사',
+    description: '계절별 대규모 문화 행사 (봄 페스티벌, 여름 캘핑, 가을 전시회, 겨울 송년회).',
+    location: '나주 시민공원 등',
+    type: 'offline',
+    schedule: '3, 6, 9, 12월',
+    participants: '행사당 200명',
+    price: '회원 50% 할인',
+    benefit: '풀 패키지 행사, 초청 아티스트'
   },
   {
     id: 6,
-    title: '청년 봉사단',
-    description: '지역 사회를 위한 다양한 봉사 활동을 기획하고 실천합니다. 활동 장소는 봉사 내용에 따라 달라집니다.',
-    location: '봉사 활동 장소 (사전 공지)',
-    type: 'offline',
-    schedule: '매월 넷째 주 일요일',
-    participants: '20-30명',
-    benefit: '봉사활동 인증서, 활동비 지원'
+    title: '신규 회원 특별 혜택',
+    description: '첫 달 50% 할인, 3개월 선결제 20% 할인, 6개월 선결제 30% 할인.',
+    location: '온라인 신청',
+    type: 'hybrid',
+    schedule: '상시',
+    participants: '제한 없음',
+    price: '기본: 월 9,900원 / 프리미엄: 월 19,900원',
+    benefit: '모든 프로그램 참여 가능'
   }
 ]
 
@@ -83,7 +89,7 @@ export default function ProgramsPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
               >
-                나주시 청년 프로그램
+                프로그램 & 요금제
               </motion.h1>
               <motion.p 
                 className="text-xl max-w-2xl mx-auto mb-8"
@@ -91,7 +97,7 @@ export default function ProgramsPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
-                노잼나주? 꿀잼나주! 청년들의 열정으로 만들어가는 새로운 나주
+                월 9,900원으로 시작하는 나주 청년 문화 네트워킹 서비스
               </motion.p>
               <motion.div
                 className="flex flex-wrap justify-center gap-4 text-sm"
@@ -100,13 +106,13 @@ export default function ProgramsPage() {
                 transition={{ duration: 0.8, delay: 0.4 }}
               >
                 <div className="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
-                  🏢 다양한 장소에서 활동
+                  💳 월 9,900원부터
                 </div>
                 <div className="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
-                  💻 온라인 참여 가능
+                  🎉 첫 달 50% 할인
                 </div>
                 <div className="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
-                  🤝 무료 참여
+                  ✨ 모든 프로그램 참여
                 </div>
               </motion.div>
             </div>
@@ -168,6 +174,10 @@ export default function ProgramsPage() {
                         <span className="text-gray-700 flex-1">{program.participants}</span>
                       </div>
                       <div className="flex items-start">
+                        <span className="text-blue-600 mr-2">💰</span>
+                        <span className="text-gray-700 flex-1">{program.price}</span>
+                      </div>
+                      <div className="flex items-start">
                         <span className="text-blue-600 mr-2">✨</span>
                         <span className="text-gray-700 flex-1">{program.benefit}</span>
                       </div>
@@ -183,7 +193,7 @@ export default function ProgramsPage() {
                          program.type === 'offline' ? '오프라인' : '온·오프라인'}
                       </span>
                       <button className="text-blue-600 hover:text-blue-700 font-semibold text-sm">
-                        참여 신청 →
+                        신청하기 →
                       </button>
                     </div>
                   </div>

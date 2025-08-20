@@ -20,19 +20,19 @@ export default function Home() {
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="bg-gray-50 p-8 rounded-lg hover:shadow-lg transition-shadow">
-                <h3 className="text-2xl font-bold text-gray-800 mb-4">라온하제 소개</h3>
-                <p className="text-gray-600 mb-4">나주시 청년들의 문화예술 활동을 통해 즐겁고 행복한 나주를 만들어갑니다.</p>
-                <Link href="/about" className="text-blue-600 hover:text-blue-700">단체 소개 →</Link>
+                <h3 className="text-2xl font-bold text-gray-800 mb-4">서비스 소개</h3>
+                <p className="text-gray-600 mb-4">나주 청년들을 위한 문화 네트워킹 플랫폼과 오프라인 활동을 제공하는 청년 문화 기업입니다.</p>
+                <Link href="/about" className="text-blue-600 hover:text-blue-700">서비스 안내 →</Link>
               </div>
               <div className="bg-gray-50 p-8 rounded-lg hover:shadow-lg transition-shadow">
-                <h3 className="text-2xl font-bold text-gray-800 mb-4">활동 프로그램</h3>
-                <p className="text-gray-600 mb-4">문화예술 활동, 지역 탐방, 청년 모임 등 다양한 프로그램을 운영합니다.</p>
-                <Link href="/programs" className="text-blue-600 hover:text-blue-700">프로그램 보기 →</Link>
+                <h3 className="text-2xl font-bold text-gray-800 mb-4">프로그램 & 요금</h3>
+                <p className="text-gray-600 mb-4">월 9,900원부터 시작하는 합리적인 요금으로 다양한 문화 프로그램에 참여하세요.</p>
+                <Link href="/programs" className="text-blue-600 hover:text-blue-700">요금제 확인 →</Link>
               </div>
               <div className="bg-gray-50 p-8 rounded-lg hover:shadow-lg transition-shadow">
                 <h3 className="text-2xl font-bold text-gray-800 mb-4">공지사항</h3>
-                <p className="text-gray-600 mb-4">라온하제의 새로운 소식과 프로그램 안내를 확인하실 수 있습니다.</p>
-                <Link href="/notice" className="text-blue-600 hover:text-blue-700">공지사항 보기 →</Link>
+                <p className="text-gray-600 mb-4">서비스 업데이트와 이벤트 소식을 확인하실 수 있습니다.</p>
+                <Link href="/notice" className="text-blue-600 hover:text-blue-700">공지사항 →</Link>
               </div>
             </div>
           </div>

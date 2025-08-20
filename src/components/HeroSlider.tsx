@@ -12,23 +12,23 @@ import 'swiper/css/effect-fade'
 const slides = [
   {
     image: '/main/1.jpg',
-    title: '온라인으로 연결되는\n청년 커뮤니티',
-    description: '시간과 장소에 구애받지 않고\n온라인 플랫폼을 통해 소통합니다'
+    title: '나주 청년 문화\n네트워킹 서비스',
+    description: '월 9,900원으로 시작하는\n프리미엄 청년 문화 플랫폼'
   },
   {
     image: '/main/2.jpg',
-    title: '다양한 장소에서\n만나는 청년들',
-    description: '나주 곳곳의 공간을 활용하여\n유연하고 창의적인 활동을 펼칩니다'
+    title: '매주 새로운\n문화 프로그램',
+    description: '전문 기획자가 준비한\n다채로운 오프라인 활동'
   },
   {
     image: '/main/3.jpg',
-    title: '함께 성장하는\n나주의 청년들',
-    description: '문화, 예술, 봉사활동을 통해\n지역사회와 소통하며 성장합니다'
+    title: '나주 청년\n1,000명이 선택',
+    description: '검증된 프로그램과\n체계적인 운영 시스템'
   },
   {
     image: '/main/4.jpg',
-    title: '변화를 만드는\n청년 네트워크',
-    description: '온오프라인을 넘나들며\n지역 발전을 위한 프로젝트를 진행합니다'
+    title: '지금 가입하면\n첫 달 50% 할인',
+    description: '신규 회원 특별 혜택\n월 4,950원에 시작하세요'
   }
 ]
 
