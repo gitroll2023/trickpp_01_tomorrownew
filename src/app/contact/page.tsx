@@ -1,10 +1,8 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import Image from 'next/image';
 import MainHeader from '@/components/MainHeader';
 import Footer from '@/components/Footer';
-import InvitationPreviewModal from '@/components/InvitationPreviewModal';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -19,7 +17,6 @@ export default function ContactPage() {
   const [nextSaturday, setNextSaturday] = useState('');
   const [isApplicationPeriod, setIsApplicationPeriod] = useState(false);
   const [applicationDeadline, setApplicationDeadline] = useState('');
-  const [showInvitationModal, setShowInvitationModal] = useState(false);
 
   useEffect(() => {
     const updateDates = () => {
@@ -139,25 +136,11 @@ export default function ContactPage() {
               <li>• 참가자는 <span className="text-blue-600 font-medium">반드시 실명으로 신청</span>해 주시기 바랍니다.</li>
               <li>• 이번주 소모임 주제에 대해서는 별도의 카카오톡으로 공지해드립니다.</li>
               <li>• 최종 참여의사는 카카오톡에서 확인하며, 참가비가 있을 경우 별도 공지해드립니다.</li>
-              <li>
-                • 참가가 확정된 분들께는 <span className="text-blue-600 font-medium">개별 초대장이 발송</span>됩니다.
-                <button
-                  onClick={() => setShowInvitationModal(true)}
-                  className="ml-2 text-sm text-blue-500 hover:text-blue-700 underline"
-                >
-                  초대장 예시 보기
-                </button>
-              </li>
+              <li>• 참가가 확정된 분들께는 <span className="text-blue-600 font-medium">개별 초대장이 발송</span>됩니다.</li>
               <li>• 현장 방문 시 발송된 초대장을 반드시 제시해 주셔야 합니다.</li>
               <li className="text-red-600 font-medium">• 청소년(만 19세 미만)은 반드시 보호자와 동반 참여를 부탁드립니다.</li>
             </ul>
           </div>
-
-          {/* 초대장 모달 */}
-          <InvitationPreviewModal
-            isOpen={showInvitationModal}
-            onClose={() => setShowInvitationModal(false)}
-          />
 
           {submitted ? (
             <div className="text-center py-8">
