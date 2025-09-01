@@ -74,7 +74,7 @@ export default function Gallery() {
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-center mb-8">우리의 활동</h2>
         <p className="text-center text-gray-600 mb-16 max-w-3xl mx-auto">
-          라온하제는 다양한 장소에서 청년들과 함께 활동합니다. 
+          내일뉴는 다양한 장소에서 청년들과 함께 활동합니다. 
           특정 시기마다 나주 내 여러 장소를 대여하여 프로그램을 진행하며, 
           온라인을 통해서도 활발히 소통하고 있습니다.
         </p>
@@ -96,7 +96,7 @@ export default function Gallery() {
         <div className="mt-16 bg-blue-50 p-8 rounded-lg">
           <h3 className="text-2xl font-bold text-gray-800 mb-4 text-center">활동 장소 안내</h3>
           <p className="text-gray-600 text-center max-w-2xl mx-auto">
-            라온하제는 고정된 사무실이 아닌, 프로그램의 성격에 맞는 다양한 장소에서 활동합니다.
+            내일뉴는 고정된 사무실이 아닌, 프로그램의 성격에 맞는 다양한 장소에서 활동합니다.
             나주시 내 카페, 사무공간, 공원, 회의실 등을 대여하여 사용하며,
             각 프로그램별 장소는 사전에 참가자들에게 안내됩니다.
             이를 통해 더 많은 청년들이 편하게 참여할 수 있는 환경을 만들고 있습니다.

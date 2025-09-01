@@ -75,17 +75,17 @@ export async function generateMetadata(
   
   if (!invitation) {
     return {
-      title: '라온하제 초대장',
-      description: '라온하제가 전하는 특별한 초대장입니다.',
+      title: '내일뉴 초대장',
+      description: '내일뉴가 전하는 특별한 초대장입니다.',
     }
   }
   
   return {
-    title: invitation.title || '라온하제 초대장',
-    description: invitation.description || '라온하제가 전하는 특별한 초대장입니다.',
+    title: invitation.title || '내일뉴 초대장',
+    description: invitation.description || '내일뉴가 전하는 특별한 초대장입니다.',
     openGraph: {
-      title: invitation.title || '라온하제 초대장',
-      description: invitation.description || '라온하제가 전하는 특별한 초대장입니다.',
+      title: invitation.title || '내일뉴 초대장',
+      description: invitation.description || '내일뉴가 전하는 특별한 초대장입니다.',
       images: ['/og-image.jpg'],
       type: 'website',
       locale: 'ko_KR',

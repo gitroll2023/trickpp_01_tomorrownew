@@ -50,7 +50,7 @@ export default function HeroSlider() {
             <div className="relative h-full">
               <Image
                 src={slide.image}
-                alt={`라온하제 메인 이미지 ${index + 1}`}
+                alt={`내일뉴 메인 이미지 ${index + 1}`}
                 fill
                 className="object-cover"
                 priority={index === 0}

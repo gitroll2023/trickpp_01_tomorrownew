@@ -9,7 +9,7 @@ export default function HomeHeader() {
         <div className="flex justify-between items-center">
           <h1 className="text-3xl font-bold tracking-tight text-gray-900">
             <Link href="/" className="hover:text-gray-600">
-              라온하제 초대장
+              내일뉴 초대장
             </Link>
           </h1>
           <Link

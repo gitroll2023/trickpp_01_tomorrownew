@@ -12,10 +12,10 @@ export default function About() {
         <div className="container mx-auto px-4">
           {/* 소개 섹션 */}
           <section className="mb-20">
-            <h1 className="text-4xl font-bold text-center mb-8">라온하제 소개</h1>
+            <h1 className="text-4xl font-bold text-center mb-8">내일뉴 소개</h1>
             <div className="max-w-3xl mx-auto text-lg text-gray-600 leading-relaxed space-y-6">
               <p>
-                라온하제는 &apos;즐거운 날&apos;이라는 의미의 순우리말로, 나주시의 청년들이 모여
+                내일뉴는 &apos;즐거운 날&apos;이라는 의미의 순우리말로, 나주시의 청년들이 모여
                 지역의 새로운 문화를 만들어가는 청년 문화예술 단체입니다.
               </p>
               <p>
@@ -97,7 +97,7 @@ export default function About() {
               <div className="relative h-[600px] rounded-lg overflow-hidden shadow-xl">
                 <Image
                   src="/group/5.jpg"
-                  alt="라온하제 활동 이미지"
+                  alt="내일뉴 활동 이미지"
                   fill
                   className="object-cover"
                   style={{ objectPosition: '30% center' }}
@@ -115,7 +115,7 @@ export default function About() {
               <div className="bg-blue-50 p-8 rounded-lg">
                 <h3 className="text-xl font-bold text-gray-800 mb-4">온라인 중심 소통</h3>
                 <p className="text-gray-600 mb-4">
-                  라온하제는 온라인 플랫폼을 적극 활용하여 청년들이 시간과 장소에 구애받지 않고
+                  내일뉴는 온라인 플랫폼을 적극 활용하여 청년들이 시간과 장소에 구애받지 않고
                   참여할 수 있도록 합니다. 화상 회의, SNS, 메신저 등 다양한 채널을 통해
                   일상적인 소통과 프로젝트 협업이 이루어집니다.
                 </p>
@@ -147,7 +147,7 @@ export default function About() {
             <div className="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-sm">
               <div className="space-y-6">
                 <p className="text-gray-600">
-                  라온하제는 나주 지역의 모든 청년들에게 열려있습니다.
+                  내일뉴는 나주 지역의 모든 청년들에게 열려있습니다.
                   온라인과 오프라인을 통해 다양한 방식으로 참여가 가능합니다.
                 </p>
                 <div className="bg-gray-50 p-6 rounded-lg">

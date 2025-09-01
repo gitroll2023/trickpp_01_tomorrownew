@@ -24,7 +24,7 @@ export default function AdminLayout({
             <div className="flex">
               <div className="flex-shrink-0 flex items-center">
                 <Link href="/admin" className="text-2xl font-bold">
-                  라온하제 관리자
+                  내일뉴 관리자
                 </Link>
               </div>
             </div>

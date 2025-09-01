@@ -20,7 +20,7 @@ export default function Navigation() {
       <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5">
-            <span className="text-xl font-bold text-white">라온하제</span>
+            <span className="text-xl font-bold text-white">내일뉴</span>
           </Link>
         </div>
         <div className="flex lg:hidden">
@@ -59,7 +59,7 @@ export default function Navigation() {
               <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
                 <div className="flex items-center justify-between">
                   <Link href="/" className="-m-1.5 p-1.5">
-                    <span className="text-xl font-bold">라온하제</span>
+                    <span className="text-xl font-bold">내일뉴</span>
                   </Link>
                   <button
                     type="button"

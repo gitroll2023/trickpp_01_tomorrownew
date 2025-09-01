@@ -137,7 +137,7 @@ export default function InvitationClient({
           href="/"
           className="block w-full py-4 bg-white text-blue-600 border-2 border-blue-600 rounded-xl font-medium text-center hover:bg-blue-50 transition-colors"
         >
-          라온하제 둘러보기
+          내일뉴 둘러보기
         </Link>
       </div>
     </div>

@@ -26,7 +26,7 @@ export default function InvitationPage({ params }: { params: { code: string } })
     setTimeout(() => {
       setInvitation({
         id: '1',
-        title: '라온하제 만두꽃피자 만들기 체험',
+        title: '내일뉴 만두꽃피자 만들기 체험',
         description: '나주의 특산품으로 만드는 특별한 요리 체험에 여러분을 초대합니다.',
         imageUrl: '/forest/1.jpg',
         createdAt: new Date().toISOString(),

@@ -56,7 +56,7 @@ export default function AdminLoginPage() {
           <Link href="/" className="inline-flex items-center group">
             <div className="relative">
               <div className="text-2xl sm:text-3xl font-bold text-blue-700 group-hover:text-blue-800 transition-colors font-nanum tracking-tight">
-                라온하제
+                내일뉴
                 <span className="absolute -top-1.5 -right-2.5 w-2 h-2 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full group-hover:from-blue-600 group-hover:to-blue-700" />
               </div>
               <div className="text-xs sm:text-sm text-gray-500 group-hover:text-gray-600 transition-colors font-pretendard">
@@ -79,7 +79,7 @@ export default function AdminLoginPage() {
                   관리자 로그인
                 </h1>
                 <p className="mt-2 text-blue-100 text-center text-sm sm:text-base font-pretendard">
-                  라온하제 관리자 페이지입니다
+                  내일뉴 관리자 페이지입니다
                 </p>
               </div>
 

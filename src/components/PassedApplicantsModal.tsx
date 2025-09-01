@@ -29,7 +29,7 @@ export default function PassedApplicantsModal({ isOpen, onClose }: PassedApplica
       <div className="bg-white rounded-lg max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto">
         <div className="p-6">
           <div className="flex justify-between items-center mb-6">
-            <h2 className="text-2xl font-bold">라온하제 문화예술단 신규 멤버 발표</h2>
+            <h2 className="text-2xl font-bold">내일뉴 문화예술단 신규 멤버 발표</h2>
             <button
               onClick={onClose}
               className="text-gray-500 hover:text-gray-700"
@@ -60,7 +60,7 @@ export default function PassedApplicantsModal({ isOpen, onClose }: PassedApplica
           </div>
 
           <div className="mt-8 text-center text-sm text-gray-500">
-            <p>라온하제 문화예술단의 새로운 멤버가 되신 것을 진심으로 축하드립니다.</p>
+            <p>내일뉴 문화예술단의 새로운 멤버가 되신 것을 진심으로 축하드립니다.</p>
             <p>자세한 안내사항은 개별 연락드리겠습니다.</p>
           </div>
         </div>

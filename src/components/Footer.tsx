@@ -9,7 +9,7 @@ export default function Footer() {
           <div className="col-span-2">
             <div className="relative mb-4">
               <h3 className="text-xl font-bold text-white font-nanum inline-block relative">
-                라온하제
+                내일뉴
                 <span className="absolute -top-0.5 -right-2 w-1.5 h-1.5 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full" />
               </h3>
               <div className="text-sm text-gray-400 font-pretendard mt-1">
@@ -46,13 +46,13 @@ export default function Footer() {
 
           {/* 연락처 */}
           <div>
-            <h3 className="text-lg font-semibold text-white mb-2">이메일</h3>
-            <p className="text-gray-400">naju.raon.enjoy@gmail.com</p>
+            <h3 className="text-lg font-semibold text-white mb-2">제작</h3>
+            <p className="text-gray-400">브릿지온</p>
           </div>
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-sm text-gray-400">
-          <p> {new Date().getFullYear()} 라온하제. All rights reserved.</p>
+          <p> {new Date().getFullYear()} 브릿지온. All rights reserved.</p>
         </div>
       </div>
     </footer>

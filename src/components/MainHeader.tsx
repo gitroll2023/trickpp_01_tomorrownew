@@ -58,7 +58,7 @@ export default function MainHeader() {
             <Link href="/" className="group flex items-center space-x-2">
               <div className="relative">
                 <div className="text-2xl sm:text-3xl font-bold text-blue-700 group-hover:text-blue-800 transition-colors font-nanum tracking-tight">
-                  라온하제
+                  내일뉴
                   <span className="absolute -top-1.5 -right-2.5 w-2 h-2 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full group-hover:from-blue-600 group-hover:to-blue-700 transition-all" />
                 </div>
                 <div className="text-xs sm:text-sm text-gray-500 group-hover:text-gray-600 transition-colors font-pretendard">
